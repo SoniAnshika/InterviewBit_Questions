@@ -1,0 +1,1 @@
+SELECT sqrt((POWER((MAX(XCoordinate) - MIN(XCoordinate)), 2) + POWER((MAX(YCoordinate) - MIN(YCoordinate)), 2))) as A FROM HOUSES;
