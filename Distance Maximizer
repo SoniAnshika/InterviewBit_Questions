@@ -1,0 +1,4 @@
+/* YOUR QUERY GOES HERE
+   Example: SELECT * FROM EMPLOYEE; 
+*/
+select MAX(ABS(XCoordinate - 20) + ABS(YCoordinate - 4))as A from HOUSES;
