@@ -1,0 +1,23 @@
+bool isprime(int n)
+{
+    for (int i = 2; i <= sqrt(n); i++)
+        if (n % i == 0)
+            return false;
+    return true;
+}
+
+vector<int> Solution::sieve(int A) {
+    bool flag;
+    vector<int>ans;
+    
+    for(int i=2;i<=A;i++)
+    {
+        flag=isprime(i);
+        if(flag)
+        {
+            ans.push_back(i);
+        }
+    }
+    
+    return ans;
+}
