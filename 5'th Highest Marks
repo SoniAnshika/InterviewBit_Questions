@@ -1,0 +1,4 @@
+/* YOUR QUERY GOES HERE
+   Example: SELECT * FROM EMPLOYEE; 
+*/
+SELECT  MARKS from (SELECT MARKS from STUDENTS order by MARKS DESC limit 5)as A order by MARKS asc limit 1;
