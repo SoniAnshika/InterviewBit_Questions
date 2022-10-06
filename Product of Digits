@@ -1,0 +1,15 @@
+int Solution::solve(int A) {
+    int p=1,d;
+    
+    if(A==0)
+    return 0;
+    
+    while(A>0)
+    {
+        d=A%10;
+        p*=d;
+        A/=10;
+    }
+    
+    return p;
+}
