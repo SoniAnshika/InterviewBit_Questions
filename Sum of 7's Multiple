@@ -1,0 +1,11 @@
+long Solution::solve(int A, int B) {
+   long x=A/7;
+   
+   if(A%7==0)
+   x--;
+   
+   long y=B/7;
+   long long s=y*(y+1)/2-x*(x+1)/2;
+   
+    return s*7;
+}
