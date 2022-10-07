@@ -1,0 +1,4 @@
+/* YOUR QUERY GOES HERE
+   Example: SELECT * FROM EMPLOYEE; 
+*/
+SELECT T.TestId from Tests as T Join Tests As t on t.TestId=T.TestId-1 where T.Marks>t.Marks;
