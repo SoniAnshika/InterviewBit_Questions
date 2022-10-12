@@ -1,0 +1,10 @@
+int Solution::solve(vector<int> &A, vector<int> &B, int C) {
+   int ct1=0,ct2=0;
+for(int i=0;i<A.size();i++){
+if(A[i]>C) ct1++;
+}
+for(int i=0;i<B.size();i++){
+if(B[i]<C) ct2++;
+}
+return max(ct1,ct2);
+}
