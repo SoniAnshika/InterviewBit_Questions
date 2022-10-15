@@ -1,0 +1,17 @@
+int Solution::solve(vector<int> &A, int B) {
+   map<int,int> m;
+    for(int i=0;i<A.size();i++)
+    {
+        m[A[i]+B]++;
+        m[A[i]-B]++;
+        m[A[i]]++;
+    }
+
+    for(auto it:m)
+    {
+        if(it.second==A.size()){
+            return 1;
+    }
+}
+    return 0;
+}
