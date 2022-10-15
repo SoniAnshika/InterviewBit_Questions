@@ -1,0 +1,17 @@
+int Solution::solve(vector<int> &A) {
+    int c=1;
+    
+    int m=A[0];
+    
+    for(int i=1;i<A.size();i++)
+    {
+        if(A[i]>m)
+        {
+            c++;
+            m=A[i];
+        }
+    }
+    
+    return c;
+}
+
