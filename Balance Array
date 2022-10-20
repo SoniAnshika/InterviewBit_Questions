@@ -1,0 +1,37 @@
+int Solution::solve(vector<int> &A) {
+    int e=0,o=0;
+    int n=A.size();
+    
+    for(int i=0;i<n;i++)
+    {
+        if(i%2==0)
+        {
+            e+=A[i];
+        }
+        else
+        {
+            o+=A[i];
+        }
+    }
+    
+    int s=o+e,c=0;
+    
+    for(int i=0;i<n;i++)
+    {
+        int x=A[i];
+        
+        s-=x;
+        
+        o=s-o;
+        e=s-o;
+        
+        if(e==o)
+        {
+           c++; 
+        }
+        
+        s+=x;
+    }
+    
+    return c;
+}
