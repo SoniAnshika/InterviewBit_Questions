@@ -1,0 +1,22 @@
+int Solution::reverse(int A) {
+    long sign=1, rem, B=0;
+    
+    if(A<0) 
+        sign=-1;
+        
+    A*=sign;
+    
+    while(A>0)
+    {
+        rem = A%10;
+        B = B*10 + rem;
+        A/=10;
+    }
+    
+    B*=sign;
+    
+    if(B>=INT_MAX || B<=INT_MIN)
+        return 0;
+    
+    return B;
+}
