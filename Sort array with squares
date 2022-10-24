@@ -1,0 +1,13 @@
+vector<int> Solution::solve(vector<int> &A) 
+{ 
+    vector<int>a;
+    
+    for(int i=0;i<A.size();i++)
+    {
+        a.push_back(A[i]*A[i]);
+    }
+    
+    sort(a.begin(),a.end());
+    
+    return a;
+}
