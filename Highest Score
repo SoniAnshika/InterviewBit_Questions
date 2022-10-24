@@ -1,0 +1,21 @@
+int Solution::highestScore(vector<vector<string> > &A) {
+    
+    unordered_map<string, pair<int ,int>> m;
+    
+    for (auto val : A)
+    {
+        string name = val[0];
+        int marks = stoi(val[1]);
+        m[name].first += marks;
+        m[name].second++;
+    }
+
+    int max_avg = 0, curr_avg = 0;
+    for(auto val : m)
+    {
+        curr_avg = (val.second).first / (val.second).second;
+        max_avg = max(curr_avg, max_avg);
+    }
+    
+    return max_avg; 
+}
