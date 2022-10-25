@@ -1,0 +1,12 @@
+int Solution::addNumbers(int A, int B) {
+    
+    while(B)
+    {
+        unsigned c = A & B;
+        A = A ^ B;
+        B = c << 1;
+    }
+    
+    return A;
+    
+}
