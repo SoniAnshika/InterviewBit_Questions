@@ -1,0 +1,23 @@
+int Solution::maximumGap(const vector<int> &A) {
+    int n=A.size();
+    vector<int>B;
+    
+    if(n<2)
+        return 0;
+        
+    for(int i=0;i<n;i++)
+    {
+        B.push_back(A[i]);    
+    }
+    
+    sort(B.begin(),B.end());
+    
+    int m=0;
+    for(int i=0;i<n-1;i++)
+    {
+        int d=B[i+1]-B[i];
+        m=max(m,d);
+    }
+       
+       return m; 
+}
