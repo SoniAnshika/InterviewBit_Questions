@@ -1,0 +1,29 @@
+int Solution::solve(vector<string> &A) {
+  
+    vector<double> b;
+
+    for(auto i:A)
+        b.push_back(stod(i));
+
+    sort(b.begin(),b.end());
+
+    int i=0;
+    int j=A.size()-1;
+
+    while(abs(i-j)>=2)
+    {
+        double s=b[i]+b[i+1]+b[j];
+        if(s>=2)
+        {
+            j--;
+        }
+        else if(s<1)
+        {
+            i++;
+        }
+        else
+        return 1;
+    }
+
+    return 0;
+}
