@@ -1,0 +1,7 @@
+int Solution::solve(int A) {
+    
+     int temp = A % 9;
+    return temp == 0 ? 9 : temp;
+
+    
+}
