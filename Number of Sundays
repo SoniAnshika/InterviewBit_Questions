@@ -1,0 +1,15 @@
+int Solution::solve(string A, int B) {
+    
+     unordered_map<string,int> mp;
+   
+    mp["Monday"] = 1;
+    mp["Tuesday"] = 2;
+    mp["Wednesday"] = 3;
+    mp["Thursday"] = 4;
+    mp["Friday"] = 5;
+    mp["Saturday"] = 6;
+    mp["Sunday"] = 7;
+   
+    return (B+mp[A]-1)/7;
+
+}
