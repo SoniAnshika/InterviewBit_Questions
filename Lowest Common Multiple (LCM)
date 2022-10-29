@@ -1,0 +1,8 @@
+long Solution::solve(int A, int B) {
+    
+    long long ans = A;
+    ans *= B;
+    ans /= __gcd(A, B);
+    return ans;
+    
+}
