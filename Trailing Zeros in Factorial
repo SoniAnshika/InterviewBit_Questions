@@ -1,0 +1,15 @@
+int Solution::trailingZeroes(int A) {
+    
+    int a=A;
+    int ans=0;
+    int n;
+    
+    for(int i=5;i<=A;i*=5)
+    {
+        n=a/i;
+        ans+=n;
+    }
+    
+    return ans;
+    
+}
