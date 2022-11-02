@@ -1,0 +1,12 @@
+int Solution::solve(vector<int> &A) {
+map<int, int> mp;
+int ans=0;
+for(int i=0; i< A.size(); i++){
+mp[A[i]]++;
+if(mp[A[i]]%2 == 0){
+ans++;
+}
+}
+
+return ans;
+}
