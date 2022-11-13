@@ -1,0 +1,12 @@
+int recursion(int a,int b)
+{
+    if(b==0)
+    {
+        return a;
+    }
+    return recursion(b,a%b);
+}
+int Solution::gcd(int A, int B) {
+    int ans=recursion(A,B);
+    return ans;
+}
