@@ -1,0 +1,8 @@
+int Solution::solve(int A, int B, int C) {
+    
+    if(C+A < B)
+        return C+A-1;
+    else if(C+A > B)
+        return (C+A)%B-1;
+     
+}
