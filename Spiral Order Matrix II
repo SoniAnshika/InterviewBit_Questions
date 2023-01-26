@@ -1,0 +1,29 @@
+vector<vector<int> > Solution::generateMatrix(int n) {
+     vector<vector<int>> ans(n,vector<int>(n));
+        
+        int k = 1,rs = 0,cs = 0,c=n,r=n,i;
+        
+        while(rs<r && cs<c)
+        {
+            for(i = cs; i<c; i++){
+                ans[rs][i] = k++;
+            }
+            rs++;
+            
+            for(i = rs; i<r; i++){
+                ans[i][c-1] = k++;
+            }
+            c--;
+            
+            for(i=c-1 ; i>=cs; i--){
+                ans[r-1][i] = k++;
+            }
+            r--;
+            
+            for(i = r-1; i>=rs; i--){
+                ans[i][cs] = k++;
+            }
+            cs++;
+        }
+        return ans;
+}
