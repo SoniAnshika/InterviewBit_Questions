@@ -1,0 +1,16 @@
+int Solution::solve(int A) {
+    int zeroes=0;
+    while(A)
+    {
+        if(A&1)
+        {
+            break;
+        }
+        else
+        {
+            zeroes++;
+        }
+        A>>=1;
+    }
+    return zeroes;
+}
